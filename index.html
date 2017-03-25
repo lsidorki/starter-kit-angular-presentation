@@ -47,7 +47,7 @@
 						<li><a href="#/environment">Environment Setup</a></li>
 						<li><a href="#/module">Module</a></li>
 						<li><a href="#/dependncy-injection">Dependency Injection</a></li>
-						<li><a href="#/controllers">Controllers</a></li>
+						<li><a href="#/components">Components</a></li>
 						<li><a href="#/services-factories">Services and Factories</a></li>
 						<li><a href="#/useful-directives">Useful Directives</a></li>
 						<li><a href="#/backend-communication">Backend Communication</a></li>
@@ -75,24 +75,66 @@
 				<section id="module">
 					<section id="module-basics">
 						<h3>Module</h3>
-						<p>lsidorki</p>
+						<small>
+							<p>NgModules help organize an application into cohesive blocks of functionality dedicated to a single purpose.</p>
+							<p>Many Angular libraries are modules.</p>
+						</small>
 					</section>
-					<section id="module-definition">
+					<section id="module-definition" data-markdown>
 						<h3>Module definition</h3>
-						<p>lsidorki</p>
+						<small>
+							<p>
+								import { NgModule }      from '@angular/core';
+								import { BrowserModule } from '@angular/platform-browser';
+
+								@NgModule({
+									imports:      [ BrowserModule ],
+									providers:    [ Logger ],
+									declarations: [ AppComponent ],
+									exports:      [ AppComponent ],
+									bootstrap:    [ AppComponent ]
+								})
+
+								export class AppModule { }
+							</p>
+						</small>
 					</section>
 					<section id="module-root">
 						<h3>Root Module</h3>
-						<p>lsidorki</p>
+						<small>
+							<p>Every application has at least one module, which is the root module. It is being bootstrapped to launch the whole application.</p>
+						</small>
 					</section>
 				</section>
 				<section id="dependncy-injection">
 					<h3>Dependency Injection</h3>
 					<p>pkedzier</p>
 				</section>
-				<section id="controllers">
-					<h3>Components</h3>
-					<p>lsidorki</p>
+				<section id="components">
+					<section id="components-basics">
+						<h3>Components</h3>
+						<small>
+							<p>Components are used to control the view. </p>
+							<p>They are responsible for exposing the data, handling the display and user interaction.</p>
+						</small>
+					</section>
+					<section id="components-definition" data-markdown>
+						<h3>Component definition</h3>
+						<p>
+							export class MyFirstComponent implements OnInit {
+								books: Book[];
+								selectedBook: Book;
+
+								constructor(private service: MyFirstService) { }
+
+								ngOnInit() {
+									this.books = this.service.getBooks();
+								}
+
+								selectBook(book: Book) { this.selectedBook = book; }
+							}
+						</p>
+					</section>
 				</section>
 				<section id="services-factories">
 					<h3>Services</h3>
@@ -102,9 +144,39 @@
 					<h3>Lifecycle Hooks</h3>
 					<p>pkedzier</p>
 				</section>
-				<section id="useful-directives">
-					<h3>Templates</h3>
-					<p>lsidorki</p>
+				<section id="templates">
+					<section id="templates-basics">
+						<h3>Templates</h3>
+						<small>
+							<p>Templates define the view. Via HTML it tells Angular how to render a page.</p>
+							<p>Defined in a separate template file (templateUrl) or via backticks within the component annotation metadata (template).</p>
+						</small>
+					</section>
+					<section id="template-syntax" data-markdown>
+						<h3>Template Syntax</h3>
+							<p>
+							@Component({
+								selector:    'book-shelf',
+								templateUrl: './book-shelf.component.html',
+								// template: Some pure HTML
+								providers:  [ MyFirstService ]
+							})
+						</p>
+					</section>
+					<section id="data-binding">
+						<h3>Data binding</h3>
+						<small>
+							<p>Angular supports data binding, a mechanism for coordinating parts of a template with parts of a component. Binding markups tell Angular how to connect both sides. </p> 
+							<p>There are four ways of data binding: </p>
+							<ul>
+								<li>interpolation: {{value}}</li>
+								<li>property binding: [property] = "value"</li>
+								<li>event binding: (event) = "handler"</li>
+								<li>two way data binding: [(ng-model)] = "property"</li>
+							</ul>
+						</small>
+					</p>
+					</section>
 				</section>
 				<section id="useful-directives">
 					<h3>Data manipulation and events</h3>

@@ -162,8 +162,29 @@
 					</section>
 				</section>
 				<section id="services">
+					<section id="services-about">
 					<h3>Services</h3>
-					<p>pkedzier</p>
+						<small>
+							<p>Services are being built for the business logic of application, which is not associated with a specific view, but shared across many components.</p>
+							<p>Service provides a shared data, logic or encapsulates external interactions. </p>
+							<p><b>It should do something specific and do it well.</b></p>
+						</small>
+					</section>
+					<section id="services-definition" data-markdown>
+					<h3>Services</h3>
+						<p>
+							export class MyService {
+								private someData: SomeData[] = [];
+
+								constructor(
+									private someService: SomeService) { }
+
+								getData() {
+									return this.someData;
+								}
+							}
+						</p>
+					</section>
 				</section>
 				<section id="lifecycle">
 					<h3>Lifecycle Hooks</h3>

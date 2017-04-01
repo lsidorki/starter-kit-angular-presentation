@@ -248,30 +248,65 @@
 					</section>
 				</section>
 				<section id="data-manipulation-events">
-					<h3>Data display and events</h3>
-					<small>
-						<p>Displaying data:</p>
-						<ul>
-							<li>Interpolation</li>
-							<li>*ngFor</li>
-							<li>*ngIf</li>
-							<li>[ngStyle]</li>
-							<li>[ngClass]</li>
-							<li>[ngSwitch]</li>
-							<li>[ngPlural]</li>
-						</ul>
-						<p>User input events</p>
-						<ul>
-							<li>(click)</li>
-							<li>(keyup)</li>
-							<li>(blur)</li>
-							<li>$event</li>
-						</ul>
-					</small>
+					<section id="displaying-data">
+						<h3>Displaying data</h3>
+						<small>
+							<ul>
+								<li>Interpolation</li>
+								<li>*ngFor</li>
+								<li>*ngIf</li>
+								<li>[ngStyle]</li>
+								<li>[ngClass]</li>
+								<li>[ngSwitch]</li>
+								<li>[hidden]</li>
+								<li>[disabled]</li>
+							</ul>
+						</small>
+					</section>
+					<section id="user-input-events">
+						<h3>User input events</h3>
+						<small>
+							<ul>
+								<li>(click)</li>
+								<li>(keyup)</li>
+								<li>(blur)</li>
+								<li>(ngSubmit)</li>
+								<li>$event</li>
+							</ul>
+						</small>
+					</section>
 				</section>
 				<section id="forms">
-					<h3>Angular Forms</h3>
-					<p>lsidorki</p>
+					<section id="forms-basics">
+						<h3>Angular Forms</h3>
+						<small>
+							<p>Angular Forms control data input/changes, performs validation and presents errors.</p>
+							<p>Forms are based mainly on ngModel, which is not only two-way data binding, but also gives control on the data state and validity. Therefore it updates the control with special Angular CSS classes that reflect the state:</p>
+							<ul>
+								<li>ng-touched/ng-untouched</li>
+								<li>ng-dirty/ng-pristine</li>
+								<li>ng-valid/ng-invalid</li>
+							</ul>
+						</small>
+					</section>
+					<section id="forms-definition" data-markdown>
+						<h3>Import FormsModule</h3>
+						<p>
+							import { FormsModule }   from '@angular/forms';
+							// (...)
+							imports: [
+								BrowserModule,
+								FormsModule
+							],
+						</p>
+					</section>
+					<section id="forms-bootstrap">
+						<h3>Bootstrap classes</h3>
+						<small>
+							<p>For the data presentation CSS classes, bootstrap is recommended (however not mandatory). These classes are purely cosmetic. Bootstrap gives the form a little style.</p>
+							<p>Bootstrap stylesheet file needs to be included in HEAD: bootstrap.min.css</p>
+						</small>
+					</section>
 				</section>
 				<section id="backend-communication">
 					<h3>Backend Communication (HTTP Client)</h3>

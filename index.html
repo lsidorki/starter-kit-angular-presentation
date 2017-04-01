@@ -313,8 +313,49 @@
 					<p>pkedzier</p>
 				</section>
 				<section id="routing">
-					<h3>Routing</h3>
-					<p>pkedzier</p>
+					<section id="routing-basics">
+						<h3>Routing</h3>
+						<small>
+							<p>Navigation between views is performed by Angular Router. It interpretes a browser URL as an instruction, reads optional parameters and navigates both through links and also browser buttons.</p>
+							<p>It can log not only user's link clicks, but also buttons, form elements or even caused by other responses.</p>
+						</small>
+					</section>
+					<section id="routing-concepts">
+						<h3>Routing concepts</h3>
+						<small>
+							<ul>
+								<li>base href for root HTML page</li>
+								<li>Router is a part of <i>@angular/router</i> package</li>
+								<li>Router is a singleton service defining <i>Routes</i></li>
+								<li>Routing is defined by RouterModule.forRoot method with given routing array</li>
+								<li>Each <i>Route</i> maps a URL path to a component</li>
+								<li>The order of the routes in the configuration matters - first match win</li>
+								<li><i>router-outlet</i> directive marks where the router displays a view</li>
+								<li>Control over each app elements is assured by <i>RouterLink</i></li>
+								<li><i>RouterState</i> holds information about <i>ActivatedRoute</i> objects tree</li>
+							</ul>
+						</small>
+					</section>
+					<section id="routing-definition" data-markdown>
+						<h3>Routing definition</h3>
+						<small>
+							<p>
+								const appRoutes: Routes = [
+									{ path: 'some-pattern', component: TargetComponent },
+									{ path: '**', component: PageNotFoundComponent }
+								];
+
+								@NgModule({
+									imports: [
+										RouterModule.forRoot(appRoutes)
+										// ...
+									],
+									// ...
+								})
+								export class AppModule { }
+							</p>
+						</small>
+					</section>
 				</section>
 				<section id="pipes">
 					<h3>Pipes (optional)</h3>

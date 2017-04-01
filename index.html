@@ -132,8 +132,31 @@
 					</section>
 				</section>
 				<section id="dependncy-injection">
-					<h3>Dependency Injection</h3>
-					<p>pkedzier</p>
+					<section id="dependncy-injection-about">
+						<h3>Dependency Injection</h3>
+						<small>
+								<p>Dependency Injection is a mechanism which supplies an instance of a class with dependencies it requires. Angular uses it mostly to provide services to new components.</p>
+								<p>Injector maintains a container of previously created service instances. It can also create new service instances with given provider. </p>
+								<p>Providers need to be registered in a module (root).</p>
+						</small>
+					</section>
+					<section id="dependncy-injection-definition" data-markdown>
+						<h3>Add providers to the module</h3>
+						<p>
+							providers: [
+								FirstService,
+								SecondService
+							],
+						</p>
+						<h3>Or register them in a specific component</h3>
+						<p>
+							@Component({
+								selector:    'my-selector',
+								templateUrl: './my-selector.component.html',
+								providers:  [ FirstService ]
+							})
+						</p>
+					</section>
 				</section>
 				<section id="components">
 					<section id="components-basics">

@@ -157,6 +157,31 @@
 						</p>
 					</section>
 				</section>
+				<section id="lifecycle">
+					<section id="lifecycle-definition">
+						<h3>Lifecycle Hooks</h3>
+						<small>
+							<p>A component has a lifecycle managed by Angular.</p>
+							<p>A directive has the same set of lifecycle hooks, minus the hooks that are specific to component content and views. </p>
+							<p>After creating a component/directive by calling its constructor, Angular calls the lifecycle hook methods</p>
+						</small>
+					</section>
+					<section id="lifecycle-hooks">
+						<h3>Lifecycle sequence</h3>
+						<ul>
+							<small>
+								<li>ngOnChanges()</li>
+								<li>ngOnInit()</li>
+								<li>ngDoCheck()</li>
+								<li>ngAfterContentInit()</li>
+								<li>ngAfterContentChecked()</li>
+								<li>ngAfterViewInit()</li>
+								<li>ngAfterViewChecked()</li>
+								<li>ngOnDestroy()</li>
+							</small>
+						</ul>
+					</section>
+				</section>
 				<section id="components">
 					<section id="components-basics">
 						<h3>Components</h3>
@@ -230,7 +255,7 @@
 					<section id="data-binding">
 						<h3>Data binding</h3>
 						<small>
-							<p>Angular supports data binding, a mechanism for coordinating parts of a template with parts of a component. Binding markups tell Angular how to connect both sides. </p> 
+							<p>Angular supports data binding, a mechanism for coordinating parts of a template with parts of a component. Binding markups tell Angular how to connect both sides. </p>
 							<p>There are four ways of data binding: </p>
 							<ul>
 								<li>interpolation: {{value}}</li>
@@ -304,8 +329,36 @@
 					</section>
 				</section>
 				<section id="backend-communication">
-					<h3>Backend Communication (HTTP Client)</h3>
-					<p>pkedzier</p>
+					<section id="http-client">
+						<h3>Backend Communication (HTTP Client)</h3>
+						<small>
+							<p>HTTP is the primary protocol for browser/server communication.</p>
+							<p>The Angular HTTP library simplifies application programming with the XHR and JSONP APIs.</p>
+						</small>
+					</section>
+					<section id="http-config" data-markdown>
+						<h3>How to provide HTTP service</h3>
+						<small>
+						<p>
+								import { NgModule }	from '@angular/core';
+								import { BrowserModule }	from '@angular/platform-browser';
+								import { FormsModule }	from '@angular/forms';
+								import { HttpModule, JsonpModule }	from '@angular/http';
+								import { AppComponent } from './app.component';
+
+								@NgModule({
+								  imports: [BrowserModule, FormsModule, HttpModule, JsonpModule],
+								  declarations: [AppComponent], bootstrap: [AppComponent]
+								})
+
+								export class AppModule {
+								}
+							</p>
+						</small>
+					</section>
+					<section id="http-example">
+					finish me :-(
+				</section>
 				</section>
 				<section id="routing">
 					<section id="routing-basics">
@@ -331,7 +384,19 @@
 							</ul>
 						</small>
 					</section>
-					<section id="routing-definition" data-markdown>
+					<section id="routing-definition1" data-markdown>
+						<h3>Routing definition</h3>
+						<p>
+							&lthead&gt
+								&ltbase href="/"&gt
+								//first child in the index.html
+								//to tell the router how to compose navigation URLs
+								...
+							&lt/head&gt
+
+						</p>
+					</section>
+					<section id="routing-definition2" data-markdown>
 						<h3>Routing definition</h3>
 						<small>
 							<p>

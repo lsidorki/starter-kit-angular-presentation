@@ -357,9 +357,33 @@
 							</p>
 						</small>
 					</section>
-					<section id="http-example">
-					finish me :-(
+					<section id="http-example" data-markdown>
+					<h3>Observable</h3>
+					<small>
+<p>
+	getSomething(url: string): Observable&ltString&gt{
+		 return this.http.get(url)
+		 .map(this.extractData);
+	 }
+
+	 private extractData(res: Response) {
+		 let body = res.json();
+		 return body.title || { };
+	 }
+</p>
+</small>
 				</section>
+				<section id="http-example-2" data-markdown>
+				<h3>Subscribe</h3>
+				<small>
+<p>
+	this.myService.getMyData()
+	  .subscribe(
+	     myData => this.myData = myData,
+	     error =>  this.errorMessage = <any>error);
+	 </p>
+</small>
+			</section>
 				</section>
 				<section id="routing">
 					<section id="routing-basics">

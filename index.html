@@ -447,19 +447,22 @@
 					<h2><img class="plain" src="img/livedemo.png"></h2>
 				</section>
 				<section id="excercise">
-					<h3>Excercise: VHS Rental Service</h3>
+					<h3>Excercise: "Lost&Found" office</h3>
 					<small>
-						<p>Create a Web Application for VHS Rental Service.</p>
 						<ol>
-							<li>Website consists of at least three separate pages: 'VHS Movies listing', 'Subscribed customers' and 'List of rented tapes'</li>
-							<li>Each VHS has its own info page, which consists of basic movie information, movie cover and gif from the movie.</li>
-							<li>All the listings can be sorted (date, rating, alphatebically) and filtered.</li>
-							<li>Administrator is able to rent tapes and collect them back.</li>
-							<li>Administrator collects money for each rental, but can also appli additional fee (Unrewinded tape, delay, broken tape, etc.).</li>
-							<li>During tape collection, user may also rate the movie with 5-star system.</li>
-							<li>Use Bootstrap CSS/controls and remember to keep the 90' style (very important)!</li>
+							<li>System is intended to 'Lost and Found Items' organization. Only admin role exists</li>
+							<li>Consists of 3 pages: 'Items Lost', 'Items Found' and 'Wishlists'.</li>
+							<li>Each item has its own info page with basic info (weight, color, photos, category etc.</li>
+							<li>All listings can be sorted (date added, alphatebically...) and filtered (category, etc.). </li>
+							<li>Admin is able to add a lost item to the system.</li>
+							<li>Admin is able to return the item from listing to its owner.</li>
+							<li>Admin can add users to item's wishlist. If the owner does not collect the stuff in 1 month, then the person who first reserved the item is able to collect it.</li>
+							<li>User can reserve up to 3 items. Each item has reservation queue with users waiting for collection (FIFO) only when the owner does not collect it.</li>
+							<li>Admin confirms or declines the user's collection: by owner or according to queue. (History of item needs to be tracked)</li>
+							<li>During item collection, user may also rate the item with 5-star system.</li>
+							<li>Every user needs to have a profile in the system (created by admin) with personal data.</li>
+							<li>Use Bootstrap CSS/controls and remember to keep it user friendly!</li>
 							<li>Use HTTP communication, modal windows and date picker for choosing date.</li>
-							<li>Keep the system user friendly.</li>
 						</ol>
 					</small>
 				</section>

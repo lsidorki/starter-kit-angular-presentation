@@ -37,7 +37,7 @@
 					<p>Introduction into Angular web framework</p>
 					<h2><img class="plain" src="img/angular.png"></h2>
 					<p>
-						<small>Created by <a href="https://github.com/lsidorki">Lukasz Sidorkiewicz</a> / <a href="https://github.com/pkedzier">Przemyslaw Kedzierski</a></small>
+						<small>Created by <a href="https://github.com/lsidorki">Lukasz Sidorkiewicz</a></small>
 					</p>
 				</section>
 				<section id="agenda">
@@ -57,23 +57,41 @@
 							<li><a href="#/backend-communication">Backend Communication</a></li>
 							<li><a href="#/routing">Routing</a></li>
 							<li><a href="#/livedemo">Live Demo</a></li>
-							<li><a href="#/excercise">Excercise</a></li>
+							<li><a href="#/excercise">Task</a></li>
 						</ol>
 					</small>
 				</section>
 				<section id="about">
-					<h3>About Angular (v. 4.0.0)</h3>
-					<small>
-					<ul>
-						<li>Smaller & Faster (will be still improved)</li>
-						<li>View Engine changes (generates less code)</li>
-						<li>Animation Package (moved to own package)</li>
-						<li>Improved *ngIf (if/else syntax) and *ngFor (assign local variables)</li>
-						<li>Angular Universal (allows developers to run Angular on a server)</li>
-						<li>TypeScript 2.1 and 2.2 compatibility</li>
-						<li>Packaging Changes</li>
-					</ul>
-					</small>
+					<section id="aboutv4">
+						<h3>About Angular (v. 4.0.0)</h3>
+						<small>
+						<ul>
+							<li>Smaller & Faster (will be still improved)</li>
+							<li>View Engine changes (generates less code)</li>
+							<li>Animation Package (moved to own package)</li>
+							<li>Improved *ngIf (if/else syntax) and *ngFor (assign local variables)</li>
+							<li>Angular Universal (allows developers to run Angular on a server)</li>
+							<li>TypeScript 2.1 and 2.2 compatibility</li>
+							<li>Packaging Changes</li>
+						</ul>
+						</small>
+					</section>
+					<section id="aboutv5">
+						<h3>About Angular (v. 5.0.0)</h3>
+						<small>
+						<ul>
+							<li>Build optimizer applied by default</li>
+							<li>Compiler improvement</li>
+							<li>Angular Universal State Transfer API and DOM Support</li>
+							<li>Internationalized Number, Date, and Currency Pipes</li>
+							<li>Support for multiple names for your components / directives</li>
+							<li>New HttpClient</li>
+							<li>Angular Forms adds updateOn Blur / Submit</li>
+							<li>New Router Lifecycle Events</li>
+							<li>...a lot more</li>
+						</ul>
+						</small>
+					</section>
 				</section>
 				<section id="environment">
 					<section id="environment-setup">
@@ -447,22 +465,21 @@
 					<h2><img class="plain" src="img/livedemo.png"></h2>
 				</section>
 				<section id="excercise">
-					<h3>Excercise: "Lost&Found" office</h3>
+					<h3>Projects evaluation system</h3>
 					<small>
 						<ol>
-							<li>System is intended to 'Lost and Found Items' organization. Only admin role exists</li>
-							<li>Consists of 3 pages: 'Items Lost', 'Items Found' and 'Wishlists'.</li>
-							<li>Each item has its own info page with basic info (weight, color, photos, category etc.</li>
-							<li>All listings can be sorted (date added, alphatebically...) and filtered (category, etc.). </li>
-							<li>Admin is able to add a lost item to the system.</li>
-							<li>Admin is able to return the item from listing to its owner.</li>
-							<li>Admin can add users to item's wishlist. If the owner does not collect the stuff in 1 month, then the person who first reserved the item is able to collect it.</li>
-							<li>User can reserve up to 3 items. Each item has reservation queue with users waiting for collection (FIFO) only when the owner does not collect it.</li>
-							<li>Admin confirms or declines the user's collection: by owner or according to queue. (History of item needs to be tracked)</li>
-							<li>During item collection, user may also rate the item with 5-star system.</li>
-							<li>Every user needs to have a profile in the system (created by admin) with personal data.</li>
+							<li>There are 2 roles in the system: user and administrator.</li>
+							<li>System consists of at least three pages: Users, User Groups and Projects.</li>
+							<li>User page: admin can add, delete, edit users (with name, surname, email, etc.). Contains also listing of existing users and assigned polls.</li>
+							<li>User Groups: admin can add, delete, edit user groups. Users can be added to groups.</li>
+							<li>Projects page: admin can add, delete, edit projects which will be evaluated by users. Contains listing of existing projects.</li>
+							<li>All the listings are presented as a table, which can be filtered and sorted. </li>
+							<li>Every projects needs to have title, description, start/end dates and statistics.</li>
+							<li>Every project are activated by the date borders or manually.</li>
+							<li>Activation: Admin selects users (or user group) which will receive a poll concerning project. Then a personalized link is assigned to the user.</li>
+							<li>Poll is an additional website visible only for people having their personalized link generated. Voting system is based on three emoticons: :), :|, :(. User can vote only once.</li>
 							<li>Use Bootstrap CSS/controls and remember to keep it user friendly!</li>
-							<li>Use HTTP communication, modal windows and date picker for choosing date.</li>
+							<li>Use HTTP communication, modal windows, simple backend with database and date picker for choosing date.</li>
 						</ol>
 					</small>
 				</section>
